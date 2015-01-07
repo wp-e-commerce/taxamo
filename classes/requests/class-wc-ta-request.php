@@ -222,7 +222,7 @@ abstract class WC_TA_Request {
 
 		// Check if request is an error
 		if ( is_wp_error( $this->response ) ) {
-			$this->set_error_message( __( 'There was a problem connecting to the API.', 'woocommerce-taxamo' ) );
+			$this->set_error_message( __( 'There was a problem connecting to the API.', 'taxamo-wpec' ) );
 			$this->clear_response();
 
 			return false;
@@ -269,7 +269,7 @@ abstract class WC_TA_Request {
 			// Fallback
 			if ( '' === $this->get_error_message() ) {
 				// Set response code error message
-				$this->set_error_message( sprintf( __( 'Response code not OK (%s).', 'woocommerce-taxamo' ), ( ( isset( $this->response['response'] ) ) ? $this->response['response']['code'] . ' : ' . $this->response['response']['message'] : '' ) ) );
+				$this->set_error_message( sprintf( __( 'Response code not OK (%s).', 'taxamo-wpec' ), ( ( isset( $this->response['response'] ) ) ? $this->response['response']['code'] . ' : ' . $this->response['response']['message'] : '' ) ) );
 			}
 
 			// Clear response
@@ -280,7 +280,7 @@ abstract class WC_TA_Request {
 
 		// Check if there is a response body
 		if ( empty( $this->response['body'] ) ) {
-			$this->set_error_message( __( 'API returned an empty response.', 'woocommerce-taxamo' ) );
+			$this->set_error_message( __( 'API returned an empty response.', 'taxamo-wpec' ) );
 			$this->clear_response();
 
 			return false;

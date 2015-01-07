@@ -1,4 +1,4 @@
-*** WooCommerce Taxamo ***
+*** Taxamo WP eCommerce Integration ***
 
 2014.12.18 - version 1.0
  * First Release

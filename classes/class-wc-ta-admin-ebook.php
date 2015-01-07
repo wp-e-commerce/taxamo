@@ -21,8 +21,8 @@ class WC_TA_Admin_Ebook {
 		$options['ebook'] = array(
 			'id'            => '_ebook',
 			'wrapper_class' => 'show_if_simple',
-			'label'         => __( 'E-Book', 'woocommerce-taxamo' ),
-			'description'   => __( 'E-books are always virtual products but may have different tax rules.', 'woocommerce-taxamo' ),
+			'label'         => __( 'E-Book', 'taxamo-wpec' ),
+			'description'   => __( 'E-books are always virtual products but may have different tax rules.', 'taxamo-wpec' ),
 			'default'       => 'no'
 		);
 

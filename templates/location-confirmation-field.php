@@ -6,7 +6,7 @@ if ( true === WC()->session->get( 'wc_ta_need_location_confirmation', false ) ||
 			<input type="checkbox" class="input-checkbox"
 			       name="location_confirmation" <?php checked( $location_confirmation_is_checked, true ); ?>
 			       id="location_confirmation"/>
-			<?php printf( __( 'I am established, have my permanent address, or usually reside within <strong>%s</strong>.', 'woocommerce' ), $countries[ WC()->customer->get_country() ] ); ?>
+			<?php printf( __( 'I am established, have my permanent address, or usually reside within <strong>%s</strong>.', '' ), $countries[ WC()->customer->get_country() ] ); ?>
 		</label>
 	</p>
 	<?php

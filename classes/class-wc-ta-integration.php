@@ -18,8 +18,8 @@ class WC_TA_Integration extends WC_Integration {
 	 */
 	public function __construct() {
 		$this->id                 = 'taxamo';
-		$this->method_title       = __( 'Taxamo', 'woocommerce-taxamo' );
-		$this->method_description = __( sprintf( 'Taxamo handles VAT calculation and reporting on digital goods &amp; services. %sYou need a Taxamo account for this extension to work, click here to sign up.%s', '<br/><a href="' . WooCommerce_Taxamo::TAXAMO_URL . '" target="_blank">', '</a>' ), 'woocommerce-taxamo' );
+		$this->method_title       = __( 'Taxamo', 'taxamo-wpec' );
+		$this->method_description = __( sprintf( 'Taxamo handles VAT calculation and reporting on digital goods &amp; services. %sYou need a Taxamo account for this extension to work, click here to sign up.%s', '<br/><a href="' . WooCommerce_Taxamo::TAXAMO_URL . '" target="_blank">', '</a>' ), 'taxamo-wpec' );
 
 		// Load admin form
 		$this->init_form_fields();
@@ -46,18 +46,18 @@ class WC_TA_Integration extends WC_Integration {
 	public function init_form_fields() {
 		$this->form_fields = array(
 			'private_token'           => array(
-				'title'       => __( 'Private Token', 'woocommerce-taxamo' ),
-				'description' => __( 'Get this token from your Taxamo account.', 'woocommerce-taxamo' ),
+				'title'       => __( 'Private Token', 'taxamo-wpec' ),
+				'description' => __( 'Get this token from your Taxamo account.', 'taxamo-wpec' ),
 				'type'        => 'text'
 			),
 			'public_token'            => array(
-				'title'       => __( 'Public Token', 'woocommerce-taxamo' ),
-				'description' => __( 'Get this token from your Taxamo account.', 'woocommerce-taxamo' ),
+				'title'       => __( 'Public Token', 'taxamo-wpec' ),
+				'description' => __( 'Get this token from your Taxamo account.', 'taxamo-wpec' ),
 				'type'        => 'text'
 			),
 			'enable_self_declaration' => array(
-				'title'       => __( 'Enable Self Declaration', 'woocommerce-taxamo' ),
-				'description' => __( 'Allow consumers to self declare their location when location validation failed.', 'woocommerce-taxamo' ),
+				'title'       => __( 'Enable Self Declaration', 'taxamo-wpec' ),
+				'description' => __( 'Allow consumers to self declare their location when location validation failed.', 'taxamo-wpec' ),
 				'type'        => 'checkbox',
 				'default'     => 'yes'
 			)
@@ -73,11 +73,11 @@ class WC_TA_Integration extends WC_Integration {
 		}
 		?>
 		<div id="message" class="updated woocommerce-message">
-			<p><?php _e( '<strong>Taxamo</strong> is almost ready &#8211; Please configure your API keys to begin fetching tax rates.', 'woocommerce-taxamo' ); ?></p>
+			<p><?php _e( '<strong>Taxamo</strong> is almost ready &#8211; Please configure your API keys to begin fetching tax rates.', 'taxamo-wpec' ); ?></p>
 
 			<p class="submit"><a
 					href="<?php echo admin_url( 'admin.php?page=wc-settings&tab=integration&section=taxamo' ); ?>"
-					class="button-primary"><?php _e( 'Settings', 'woocommerce-taxamo' ); ?></a></p>
+					class="button-primary"><?php _e( 'Settings', 'taxamo-wpec' ); ?></a></p>
 		</div>
 	<?php
 	}
